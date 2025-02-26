@@ -1,0 +1,26 @@
+{
+  "name": "chalix_test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "lint": "eslint . --fix",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.1",
+    "prettier": "^3.5.2",
+    "vite": "^6.2.0"
+  }
+}

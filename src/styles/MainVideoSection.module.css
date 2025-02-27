@@ -1,0 +1,42 @@
+.video-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+  z-index: 5;
+}
+
+.video-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  filter: brightness(0.7);
+}
+.title-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  z-index: 2;
+  padding: 150px 48px;
+}
+.title {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

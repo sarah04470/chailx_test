@@ -2,7 +2,9 @@
 body {
   font-size: 16px;
   color: #222;
-  font-family: 'Pretendard', 'Apple SD Gothic Neo',  '돋움', Dotum, 'Arial', 'Helvetica', Sans-serif;
+  font-family:
+    'Pretendard', 'Apple SD Gothic Neo', '돋움', Dotum, 'Arial', 'Helvetica',
+    Sans-serif;
 }
 
 /* 버튼 기본 스타일 */

@@ -10,23 +10,25 @@ const MainVideoSection = () => {
   const titleRef = useRef(null);
 
   useEffect(() => {
-    const split = new SplitType(titleRef.current, { types: "lines,words,chars" });
+    const split = new SplitType(titleRef.current, {
+      types: 'lines,words,chars',
+    });
     const chars = split.chars;
 
     gsap.from(chars, {
       yPercent: 0,
       autoAlpha: 0,
       duration: 2,
-      ease: "circ.out",
+      ease: 'circ.out',
       stagger: {
         amount: 1,
-        from: "left"
+        from: 'left',
       },
       scrollTrigger: {
         trigger: titleRef.current,
-        start: "top bottom",
-        markers: true
-      }
+        start: 'top bottom',
+        markers: true,
+      },
     });
 
     return () => {

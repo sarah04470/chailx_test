@@ -14,10 +14,16 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, 'src'),
       '@components': path.resolve(__dirname, 'src/components'),
+      '@header': path.resolve(__dirname, 'src/components/header'),
       '@sections': path.resolve(__dirname, 'src/components/sections'),
       '@styles': path.resolve(__dirname, 'src/styles'),
       '@pages': path.resolve(__dirname, 'src/pages'),
       '@assets': path.resolve(__dirname, 'src/assets'),
+    },
+  },
+  css: {
+    modules: {
+      generateScopedName: '[local]',
     },
   },
 });

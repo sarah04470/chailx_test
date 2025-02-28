@@ -19,15 +19,17 @@ const MainVideoSection = () => {
       yPercent: 0,
       autoAlpha: 0,
       duration: 2,
+      overwrite: 'auto',
       ease: 'circ.out',
+      delay: 1,
       stagger: {
-        amount: 1,
+        amount: 1.5,
         from: 'left',
       },
       scrollTrigger: {
         trigger: titleRef.current,
         start: 'top bottom',
-        markers: true,
+        // markers: true,
       },
     });
 

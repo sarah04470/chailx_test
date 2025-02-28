@@ -1,9 +1,21 @@
-import MainVideoSection from './components/sections/MainVideo';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Header from '@header/Header';
+import Home from '@pages/Home';
+// import PresentationPage from '@pages/PresentationPage'; // 발표논문 페이지 추가
 
 export default function App() {
   return (
-    <div>
-      <MainVideoSection />
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        {/* 메인 페이지 */}
+        <Route path="/" element={<Home />} />
+
+        {/* 발표논문 페이지 */}
+        {/* <Route path="/board/presentation" element={<PresentationPage />} /> */}
+      </Routes>
+    </Router>
   );
 }

@@ -10,23 +10,23 @@ const HeaderPC = () => {
       <ul className={styles['nav-list']}>
         <li className={styles['nav-item']}>
           <div className={styles['nav-link']}>
-            <a className={styles['nav-anchor']} href="/">
+            <a className={styles['nav-anchor']} href="/" onClick={(e)=>{ e.preventDefault()}}>
               WHO WE ARE
             </a>
           </div>
           <ul className={styles['sub-menu']}>
             <li className={styles['sub-item']}>
-              <a className={styles['sub-anchor']} href="/">
+              <a className={styles['sub-anchor']} href="/" onClick={(e)=>{ e.preventDefault()}}>
                 CAIT VALUE
               </a>
             </li>
             <li className={styles['sub-item']}>
-              <a className={styles['sub-anchor']} href="/">
+              <a className={styles['sub-anchor']} href="/" onClick={(e)=>{ e.preventDefault()}}>
                 CEO 메시지
               </a>
             </li>
             <li className={styles['sub-item']}>
-              <a className={styles['sub-anchor']} href="/">
+              <a className={styles['sub-anchor']} href="/" onClick={(e)=>{ e.preventDefault()}}>
                 연혁
               </a>
             </li>
@@ -34,28 +34,28 @@ const HeaderPC = () => {
         </li>
         <li className={styles['nav-item']}>
           <div className={styles['nav-link']}>
-            <a className={styles['nav-anchor']} href="/">
+            <a className={styles['nav-anchor']} href="/" onClick={(e)=>{ e.preventDefault()}}>
               WHAT WE CAN
             </a>
           </div>
           <ul className={styles['sub-menu']}>
             <li className={styles['sub-item']}>
-              <a className={styles['sub-anchor']} href="/">
+              <a className={styles['sub-anchor']} href="/" onClick={(e)=>{ e.preventDefault()}}>
                 컨설팅부
               </a>
             </li>
             <li className={styles['sub-item']}>
-              <a className={styles['sub-anchor']} href="/">
+              <a className={styles['sub-anchor']} href="/" onClick={(e)=>{ e.preventDefault()}}>
                 글로벌연구센터
               </a>
             </li>
             <li className={styles['sub-item']}>
-              <a className={styles['sub-anchor']} href="/">
+              <a className={styles['sub-anchor']} href="/" onClick={(e)=>{ e.preventDefault()}}>
                 정책연구부
               </a>
             </li>
             <li className={styles['sub-item']}>
-              <a className={styles['sub-anchor']} href="/">
+              <a className={styles['sub-anchor']} href="/" onClick={(e)=>{ e.preventDefault()}}>
                 기술개발부
               </a>
             </li>
@@ -63,13 +63,13 @@ const HeaderPC = () => {
         </li>
         <li className={styles['nav-item']}>
           <div className={styles['nav-link']}>
-            <a className={styles['nav-anchor']} href="/">
+            <a className={styles['nav-anchor']} href="/" onClick={(e)=>{ e.preventDefault()}}>
               WHAT WE DO
             </a>
           </div>
           <ul className={styles['sub-menu']}>
             <li className={styles['sub-item']}>
-              <a className={styles['sub-anchor']} href="/">
+              <a className={styles['sub-anchor']} href="/" onClick={(e)=>{ e.preventDefault()}}>
                 사업실적
               </a>
             </li>
@@ -79,7 +79,7 @@ const HeaderPC = () => {
               </a>
             </li>
             <li className={styles['sub-item']}>
-              <a className={styles['sub-anchor']} href="/">
+              <a className={styles['sub-anchor']} href="/" onClick={(e)=>{ e.preventDefault()}}>
                 NEWS
               </a>
             </li>
@@ -87,7 +87,7 @@ const HeaderPC = () => {
         </li>
         <li className={styles['nav-item']}>
           <div className={styles['nav-link']}>
-            <a className={styles['nav-anchor']} href="/">
+            <a className={styles['nav-anchor']} href="/" onClick={(e)=>{ e.preventDefault()}}>
               CONTACT
             </a>
           </div>

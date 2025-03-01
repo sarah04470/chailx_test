@@ -19,6 +19,21 @@ body {
   }
 }
 
+@keyframes moveRightLeft {
+  0% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 /* 버튼 기본 스타일 */
 .btn {
   display: inline-block;

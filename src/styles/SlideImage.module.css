@@ -1,0 +1,161 @@
+/* ✅ Slide Image Section 전체 */
+.slide-image-section {
+  position: relative;
+  width: 100%;
+  height: 300vh; /* 스크롤 효과 적용을 위해 3배 높이 */
+  z-index: 1;
+}
+
+/* ✅ 배경 변경될 영역 */
+.slide-image-position {
+  position: relative;
+  width: 100%;
+  height: 300vh;
+  z-index: 2;
+  background-color: #fff; /* 기본 배경 */
+}
+
+/* ✅ 고정된 컨텐츠 (타이틀, 버튼, 이미지) */
+.slide-image-sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  color: #fff;
+  z-index: 2;
+}
+
+/* ✅ 타이틀 스타일 */
+.slide-image-title {
+  position: relative;
+  font-size: 68px;
+  font-weight: 700;
+  text-align: center;
+  z-index: 50;
+  /* line-height: 1.2; */
+}
+
+/* ✅ 버튼 스타일 */
+.hover-business-content-btnWrap {
+  padding: 20px 0 0;
+  z-index: 99;
+}
+
+.hover-business-content-btn {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 24px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  border-radius: 2rem;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease
+    all 0.2s ease-in-out;
+}
+
+.hover-business-content-btn:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hover-business-content-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.hover-business-content-btn:hover svg {
+  animation: moveRightLeft 0.3s ease;
+}
+
+/* ✅ 이미지 래퍼 (개별 이미지 효과 적용 가능) */
+.slide-img-wrap {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  filter: brightness(1);
+}
+
+/* ✅ 이미지 공통 스타일 */
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ✅ 개별 이미지 초기 위치 설정 */
+.slide-img-wrap.wrap1 {
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.slide-img-wrap.wrap2 {
+  width: 400px;
+  height: 300px;
+  top: 100%;
+  left: 100%;
+  transform: translate(-100%);
+}
+
+.slide-img-wrap.wrap3 {
+  width: 300px;
+  height: 400px;
+  top: 100%;
+  left: 65%;
+}
+
+.slide-img-wrap.wrap4 {
+  width: 300px;
+  height: 250px;
+  top: 100%;
+  left: 20%;
+}
+
+.slide-img-wrap.wrap5 {
+  width: 400px;
+  height: 400px;
+  top: 100%;
+  left: -5%;
+}
+
+/* ✅ 반응형 (모바일) */
+@media screen and (max-width: 768px) {
+  .slide-image-title {
+    font-size: 28px;
+  }
+
+  .slide-img-wrap.wrap1 {
+    width: 200px;
+    height: 100px;
+  }
+
+  .slide-img-wrap.wrap2,
+  .slide-img-wrap.wrap3,
+  .slide-img-wrap.wrap4,
+  .slide-img-wrap.wrap5 {
+    width: 160px;
+    height: 99px;
+  }
+
+  .slide-image-sticky {
+    padding: 15px;
+  }
+
+  .hover-business-content-btn span {
+    font-size: 16px;
+  }
+}

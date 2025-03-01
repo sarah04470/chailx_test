@@ -5,6 +5,7 @@
       "@components/*": ["components/*"],
       "@header/*": ["components/header/*"],
       "@sections/*": ["components/sections/*"],
+      "@footer/*": ["components/footer/*"],
       "@styles/*": ["styles/*"],
       "@lib/*": ["lib/*"],
       "@utils/*": ["utils/*"],

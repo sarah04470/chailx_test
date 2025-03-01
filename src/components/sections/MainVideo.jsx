@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import styles from '@/styles/MainVideoSection.module.css';
+import styles from '@/styles/MainVideo.module.css';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SplitType from 'split-type';

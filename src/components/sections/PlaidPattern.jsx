@@ -54,33 +54,35 @@ const PlaidPatternSection = () => {
 
     // 리스트 아이템 애니메이션
     requestAnimationFrame(() => {
-      gsap.utils.toArray('.plaid-pattern-item .plaid-pattern-title').forEach((title, index) => {
-        const splitText = new SplitType(title, { type: 'chars' });
-    
-        gsap.fromTo(
-          splitText.chars,
-          {
-            opacity: 0,
-            yPercent: 80,
-          },
-          {
-            opacity: 1,
-            yPercent: 0,
-            duration: 1,
-            ease: 'power4.out',
-            stagger: {
-              amount: 1,
-              from: 'left',
+      gsap.utils
+        .toArray('.plaid-pattern-item .plaid-pattern-title')
+        .forEach((title, index) => {
+          const splitText = new SplitType(title, { type: 'chars' });
+
+          gsap.fromTo(
+            splitText.chars,
+            {
+              opacity: 0,
+              yPercent: 80,
             },
-            scrollTrigger: {
-              trigger: title,
-              start: 'top 85%',
-              end: 'top 60%',
-              // markers: true
-            },
-          }
-        );
-      });
+            {
+              opacity: 1,
+              yPercent: 0,
+              duration: 1,
+              ease: 'power4.out',
+              stagger: {
+                amount: 1,
+                from: 'left',
+              },
+              scrollTrigger: {
+                trigger: title,
+                start: 'top 85%',
+                end: 'top 60%',
+                // markers: true
+              },
+            }
+          );
+        });
     });
   }, []);
 
@@ -124,7 +126,12 @@ const PlaidPatternSection = () => {
                         className="hover-image"
                       />
                     </div>
-                    <a href={`/detail/${filteredIndex}`} onClick={(e)=>{ e.preventDefault()}}>
+                    <a
+                      href={`/detail/${filteredIndex}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                      }}
+                    >
                       <div
                         ref={(el) => {
                           if (el && !titleRefs.current.includes(el)) {

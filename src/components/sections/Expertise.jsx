@@ -130,7 +130,9 @@ const ExpertiseSection = () => {
                   ref={(el) => (cardRefs.current[index] = el)}
                   className={styles['expertise-card']}
                   href="/"
-                  onClick={(e)=>{ e.preventDefault()}}
+                  onClick={(e) => {
+                    e.preventDefault();
+                  }}
                 >
                   <div className={styles['txt-box']}>
                     <div className={styles['expertise-card-number']}>

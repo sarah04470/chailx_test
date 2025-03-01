@@ -17,7 +17,7 @@ const ExpertiseSection = () => {
       scrollTrigger: {
         trigger: titleRefs.current[0],
         start: 'top 80%',
-        markers: true,
+        // markers: true,
       },
     });
 

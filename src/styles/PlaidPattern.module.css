@@ -1,0 +1,199 @@
+/* Plaid Pattern Section 스타일 */
+.plaid-pattern-section {
+  width: 100%;
+  height: 100%;
+  padding: 210px 48px 300px;
+  background-color: #fff;
+}
+
+.plaid-pattern-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.plaid-pattern-items {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  color: #fff;
+}
+
+.plaid-pattern-items li {
+  width: 20%;
+  aspect-ratio: 1 / 1;
+}
+
+/* Big Point Item (최상단 큰 뉴스 블록) */
+.big-point-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40% !important;
+  aspect-ratio: 1 / 0.85 !important;
+  margin-top: -6rem;
+  background-color: #ff471d;
+  padding: 70px 50px;
+}
+
+.big-point-item .plaid-pattern-title {
+  font-size: 22px;
+}
+
+.big-point-item .plaid-pattern-text {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  overflow: hidden;
+}
+
+/* 뉴스 항목 스타일 */
+.plaid-pattern-item {
+  background-color: #194391;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s;
+}
+
+.plaid-pattern-item:hover {
+  background-color: #163c7a;
+}
+
+.empty-item {
+  background-color: transparent;
+}
+.empty-item:hover {
+  background-color: transparent;
+}
+
+/* 아이콘 */
+.plaid-pattern-icon {
+  width: 62px;
+  height: auto;
+  margin-left: auto;
+  position: relative;
+}
+
+.plaid-pattern-icon img {
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  height: auto;
+}
+
+.plaid-pattern-icon img.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.plaid-pattern-item:hover .plaid-pattern-icon img.default-image {
+  opacity: 0;
+}
+
+.plaid-pattern-item:hover .plaid-pattern-icon img.hover-image {
+  opacity: 1;
+}
+
+/* 텍스트 애니메이션용 */
+.plaid-pattern-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* 바로가기 버튼 스타일 */
+.pattern-item-color {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ff471d;
+  padding: 80px 40px 50px;
+  transition: all 0.3s;
+}
+
+.pattern-item-color .pattern-item-btn {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pattern-item-color:hover {
+  background-color: #d63b1a;
+}
+
+.pattern-item-color svg {
+  font-size: 60px;
+  transform: rotate(-40deg);
+  transition: all 0.3s;
+}
+
+.pattern-item-color:hover svg {
+  transform: translate(20%, -20%) rotate(-40deg);
+}
+
+/* 반응형 스타일 */
+@media screen and (max-width: 768px) {
+  .plaid-pattern-section {
+    padding: 200px 15px 100px;
+  }
+
+  .plaid-pattern-items li {
+    width: 50%;
+  }
+
+  .big-point-item {
+    width: 100%;
+    aspect-ratio: 1 / 0.7;
+    padding: 15px;
+  }
+
+  .plaid-pattern-text {
+    font-size: 28px;
+  }
+
+  .plaid-pattern-title {
+    font-size: 16px;
+  }
+
+  .plaid-pattern-item {
+    padding: 15px;
+  }
+
+  .pattern-item-color {
+    padding: 15px;
+  }
+
+  .pattern-item-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .pattern-item-color svg {
+    font-size: 16px;
+  }
+}
+
+/* 특정 화면에서만 보이도록 */
+.pc-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .pc-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+}

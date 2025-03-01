@@ -1,7 +1,7 @@
 import React from 'react';
 import MainVideoSection from '@sections/MainVideo';
 import ExpertiseSection from '@sections/Expertise';
-// import PlaidPatternSection from '@sections/PlaidPatternSection';
+import PlaidPatternSection from '@sections/PlaidPattern';
 // import SlideImageSection from '@sections/SlideImageSection';
 
 const Home = () => {
@@ -9,7 +9,7 @@ const Home = () => {
     <main>
       <MainVideoSection />
       <ExpertiseSection />
-      {/* <PlaidPatternSection /> */}
+      <PlaidPatternSection />
       {/* <SlideImageSection /> */}
     </main>
   );

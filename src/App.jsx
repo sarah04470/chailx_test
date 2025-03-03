@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from '@header/Header';
 import Home from '@pages/Home';
 import Footer from '@footer/Footer';
-// import PresentationPage from '@pages/PresentationPage'; // 발표논문 페이지 추가
+import Presentation from '@pages/board/Presentation';
 
 export default function App() {
   return (
@@ -15,7 +15,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
 
         {/* 발표논문 페이지 */}
-        {/* <Route path="/board/presentation" element={<PresentationPage />} /> */}
+        <Route path="/board/presentation" element={<Presentation />} />
       </Routes>
       <Footer />
     </Router>

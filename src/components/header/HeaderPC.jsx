@@ -140,7 +140,7 @@ const HeaderPC = () => {
               </a>
             </li>
             <li className={styles['sub-item']}>
-              <a className={styles['sub-anchor']} href="/">
+              <a className={styles['sub-anchor']} href="/board/presentation">
                 발표논문
               </a>
             </li>

@@ -16,7 +16,11 @@ const Footer = () => {
       <div className={styles.inner}>
         <div className={styles['footer-title']}>
           <div className={styles.logo}>
-            <img src="/images/logo2.png" className={styles['logo-item']} alt="CAIT" />
+            <img
+              src="/images/logo2.png"
+              className={styles['logo-item']}
+              alt="CAIT"
+            />
           </div>
           <div className={styles['privacy']}>
             <a href="#">개인정보처리방침</a>

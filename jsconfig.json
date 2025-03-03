@@ -7,10 +7,8 @@
       "@sections/*": ["components/sections/*"],
       "@footer/*": ["components/footer/*"],
       "@styles/*": ["styles/*"],
-      "@lib/*": ["lib/*"],
-      "@utils/*": ["utils/*"],
-      "@constants/*": ["constants/*"],
-      "@hooks/*": ["hooks/*"]
+      "@assets/*": ["assets/*"],
+      "@data/*": ["data/*"]
     }
   }
 }

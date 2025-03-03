@@ -1,10 +1,13 @@
 import React from 'react';
 import styles from '@/styles/HeaderPC.module.css';
+import { useNavigate } from 'react-router-dom';
 
 const HeaderPC = () => {
+  const navigate = useNavigate();
+  
   return (
     <nav className={styles['pc-nav']}>
-      <div className={styles['logo']}>
+      <div className={styles['logo']}  onClick={() => navigate("/")}>
         <img src="/images/logo2.png" alt="CAIT" />
       </div>
       <ul className={styles['nav-list']}>

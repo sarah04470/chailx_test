@@ -11,17 +11,17 @@ const slides = [
   {
     img: '/images/7.png',
     title: 'Creating impact\nthrough meaningful solutions',
-    menu: '사업실적'
+    menu: '사업실적',
   },
   {
     img: '/images/8.png',
     title: 'Driving innovation\nwith impactful research',
-    menu :'발표논문'
+    menu: '발표논문',
   },
   {
     img: '/images/9.png',
     title: 'Providing real-time updates\non industry developments',
-    menu :'NEWS'
+    menu: 'NEWS',
   },
 ];
 
@@ -56,7 +56,7 @@ const HeroSection = () => {
         delay: 1,
         stagger: {
           amount: 0.5,
-          from: 'random'
+          from: 'random',
         },
         ease: 'power4.inOut',
       }
@@ -89,13 +89,13 @@ const HeroSection = () => {
                   ref={(el) => (titleRefs.current[index] = el)}
                 >
                   {typeof slide.title === 'string'
-                  ? slide.title.split("\n").map((line, index) => (
-                      <span key={index}>
-                        {line}
-                        <br />
-                      </span>
-                    ))
-                  : slide.title}
+                    ? slide.title.split('\n').map((line, index) => (
+                        <span key={index}>
+                          {line}
+                          <br />
+                        </span>
+                      ))
+                    : slide.title}
                 </h2>
               </div>
             </SwiperSlide>
@@ -117,9 +117,7 @@ const HeroSection = () => {
                 <div className={styles['hero-line']}></div>
               </div>
               <a href="#" className={styles['hero-pagination-link']}>
-                <p className={styles['hero-pagination-name']}>
-                  {slide.menu}
-                </p>
+                <p className={styles['hero-pagination-name']}>{slide.menu}</p>
               </a>
             </div>
           ))}

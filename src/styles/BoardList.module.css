@@ -79,15 +79,21 @@
 /* 반응형 스타일 */
 @media screen and (max-width: 768px) {
   .board {
-    padding: 70px 16px;
+    padding: 40px 16px;
   }
 
   .board-title {
+    padding: 0 5px !important;
     font-size: 28px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
-  .board-content {
-    padding: 40px 16px;
+  .board-list:nth-of-type(2) .board-title {
+    justify-content: flex-start;
+    width: 80% !important;
   }
 
   .board-item {
@@ -105,6 +111,6 @@
   .board-date,
   .board-tag {
     font-size: 14px;
-    padding: 10px 0;
+    padding: 20px 0;
   }
 }

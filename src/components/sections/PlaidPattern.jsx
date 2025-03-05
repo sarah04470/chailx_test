@@ -9,25 +9,53 @@ gsap.registerPlugin(ScrollTrigger);
 const PlaidPatternSection = () => {
   const bigPointTextRef = useRef(null);
   const titleRefs = useRef([]);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-  const [newsTitles, setNewsTitles] = useState([
-    '순환경제사회법 시행령 일부개정령안 입법예고',
-    '',
-    '신뢰와 정확성을 바탕으로 하는 카이트 엔지니어링',
-    '',
-    '',
-    '',
-    '신뢰와 정확성을 바탕으로 하는 카이트 엔지니어링',
-    '',
-    '고객 맞춤형 환경 솔루션 제공',
-    '',
-    '신뢰와 정확성을 바탕으로 하는 카이트 엔지니어링',
-    '',
-    '고객 맞춤형 환경 솔루션 제공',
-    '',
-    '',
-    '',
-  ]);
+  const newsData = [
+    { text: '순환경제사회법 시행령 일부개정령안 입법예고', visibleFor: 'both' },
+    { text: '', visibleFor: 'both' },
+    {
+      text: '신뢰와 정확성을 바탕으로 하는 카이트 엔지니어링',
+      visibleFor: 'both',
+    },
+    { text: '', visibleFor: 'pc-only' },
+    { text: '', visibleFor: 'pc-only' },
+    { text: '', visibleFor: 'pc-only' },
+    {
+      text: '신뢰와 정확성을 바탕으로 하는 카이트 엔지니어링',
+      visibleFor: 'both',
+    },
+    { text: '', visibleFor: 'both' },
+    { text: '', visibleFor: 'mobile-only' },
+    { text: '고객 맞춤형 환경 솔루션 제공', visibleFor: 'both' },
+    { text: '', visibleFor: 'pc-only' },
+    {
+      text: '신뢰와 정확성을 바탕으로 하는 카이트 엔지니어링',
+      visibleFor: 'both',
+    },
+    { text: '', visibleFor: 'both' },
+    { text: '', visibleFor: 'mobile-only' },
+    { text: '고객 맞춤형 환경 솔루션 제공', visibleFor: 'both' },
+    { text: '', visibleFor: 'pc-only' },
+    { text: '', visibleFor: 'pc-only' },
+    { text: '', visibleFor: 'pc-only' },
+  ];
+
+  const filteredNewsTitles = newsData
+    .filter(
+      (item) =>
+        item.visibleFor === 'both' ||
+        item.visibleFor === (isMobile ? 'mobile-only' : 'pc-only')
+    )
+    .map((item) => item.text);
+
+  useEffect(() => {
+    // Resize 감지해서 모바일 여부 업데이트
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     // Big Point Item 텍스트 애니메이션
@@ -95,33 +123,31 @@ const PlaidPatternSection = () => {
           {/* Big Point Item */}
           <li className={styles['big-point-item']}>
             <div className={styles['plaid-pattern-title']}>Latest News</div>
-            <a href="/detail/31">
+            <a href="/detail/31" onClick={(e) => e.preventDefault()}>
               <div
                 ref={bigPointTextRef}
                 className={styles['plaid-pattern-text']}
               >
-                {newsTitles[0]}
+                {filteredNewsTitles[0]}
               </div>
             </a>
           </li>
 
           {/* News Items */}
-          {newsTitles.slice(1).map((title, index) => {
+          {filteredNewsTitles.slice(1).map((title, index) => {
             const isEmpty = title.trim() === '';
             if (!isEmpty) filteredIndex++; // 빈 요소가 아니면 카운트 증가
 
             return (
               <li
                 key={index}
-                className={`${styles['plaid-pattern-item']} ${
-                  isEmpty ? styles['empty-item'] : ''
-                }`}
+                className={`${styles['plaid-pattern-item']} ${isEmpty ? styles['empty-item'] : ''}`}
               >
                 {!isEmpty && (
                   <>
                     <div className={styles['plaid-pattern-icon']}>
                       <img
-                        src={`/images/icons/2-${filteredIndex}.png`} // 빈 요소 제외한 올바른 이미지 매칭
+                        src={`/images/icons/2-${filteredIndex}.png`}
                         alt="icon"
                         className="hover-image"
                       />

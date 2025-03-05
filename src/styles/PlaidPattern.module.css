@@ -144,11 +144,36 @@
   .plaid-pattern-items li {
     width: 50%;
   }
+  .plaid-pattern-items li:nth-of-type(3),
+  .plaid-pattern-items li:nth-of-type(4) {
+    width: 167.5px;
+    height: 167.5px;
+  }
 
   .big-point-item {
-    width: 100%;
-    aspect-ratio: 1 / 0.7;
+    width: calc((100% / 0) * 2) !important;
+    aspect-ratio: 1 / 0.7 !important;
     padding: 15px;
+  }
+
+  .big-point-item .plaid-pattern-title {
+    font-size: 22px;
+  }
+
+  .big-point-item .plaid-pattern-text {
+    font-size: 28px;
+    font-weight: 900;
+  }
+
+  /* 아이콘 */
+  .plaid-pattern-icon {
+    width: 52px;
+    height: 52px;
+    overflow: hidden;
+  }
+
+  .pattern-item-color:hover svg {
+    transform: translate(20%, -20%) rotate(-40deg);
   }
 
   .plaid-pattern-text {
@@ -167,10 +192,10 @@
     padding: 15px;
   }
 
-  .pattern-item-btn {
+  .pattern-item-color .pattern-item-btn {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-end;
   }
 

@@ -2,10 +2,44 @@
   position: fixed;
   width: 100%;
   top: 0;
-  opacity: 0;
   z-index: 1000;
+  background-color: transparent;
+  transition:
+    transform 0.3s ease-in-out,
+    background 0.3s ease-in-out,
+    backdrop-filter 0.3s ease-in-out;
+}
+
+.initial {
+  opacity: 0;
+  transform: translateY(-100%);
   animation: fadeInDown 1s ease-out forwards;
   animation-delay: 0.8s;
+}
+
+/* 스크롤 내릴 때 숨김 */
+.hide {
+  display: none;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out;
+}
+
+/* 스크롤 올릴 때 나타남 */
+.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  background-color: rgba(85, 85, 85, 0.5);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+}
+
+/* 최상단일 때 */
+.show.scroll-top {
+  background-color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .header-container {

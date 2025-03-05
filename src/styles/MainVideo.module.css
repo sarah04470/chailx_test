@@ -40,3 +40,14 @@
   height: 100%;
   object-fit: cover;
 }
+
+@media screen and (max-width: 768px) {
+  .title-wrap {
+    padding: 95px 15px;
+  }
+  .title.mobile-only {
+    width: 100%;
+    display: flex !important;
+    font-size: 28px;
+  }
+}

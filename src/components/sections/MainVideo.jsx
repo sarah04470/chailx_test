@@ -46,9 +46,18 @@ const MainVideoSection = () => {
         </video>
       </div>
       <div className={styles['title-wrap']}>
-        <h1 ref={titleRef} className={styles['title']}>
+        <h1 ref={titleRef} className={[styles['title'], 'pc-only'].join(' ')}>
           <div>지속 가능한 미래와 고객의 비즈니스 성공을</div>
           <div>위한 혁신적인 환경 솔루션을 제공합니다</div>
+        </h1>
+        <h1
+          ref={titleRef}
+          className={[styles['title'], 'mobile-only'].join(' ')}
+        >
+          <div>지속 가능한 미래와 고객의</div>
+          <div>비즈니스 성공을 위한</div>
+          <div>혁신적인 환경 솔루션을</div>
+          <div>제공합니다</div>
         </h1>
       </div>
     </section>

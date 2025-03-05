@@ -68,10 +68,18 @@ const HeroSection = () => {
       <div className={styles['hero-container']}>
         <Swiper
           ref={swiperRef}
-          spaceBetween={50}
+          // spaceBetween={50}
           slidesPerView={1}
           loop={true}
           className={styles['hero-swiper']}
+          onSwiper={(swiper) => {
+            swiperRef.current = { swiper };
+            setTimeout(() => {
+              swiper.slideTo(1, 1200);
+              setActiveIndex(1);
+              animateTitle(1);
+            }, 200);
+          }}
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index} className={styles['hero-slide']}>

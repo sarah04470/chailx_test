@@ -31,7 +31,7 @@
  ┃ ┃ ├ 📄 PlaidPattern.jsx   # 패턴 스타일 섹션
  ┃ ┃ ├ 📄 SlideImage.jsx     # 슬라이드 이미지 섹션
  ├ 📂 data                   # JSON 데이터 저장 폴더
- ┃ └ 📄 chailx.json          # 발표논문 게시판 데이터
+ ┃ └ 📄 chalix.json          # 발표논문 게시판 데이터
  ├ 📂 pages                  # 페이지별 컴포넌트
  ┃ ├ 📂 board                # 게시판 페이지 폴더
  ┃ ┃ ├ 📄 Presentation.jsx   # 게시판 페이지
@@ -85,7 +85,7 @@
 - JSON 데이터를 활용하여 게시판 리스트를 동적으로 렌더링
 
 ### 3. 발표논문 게시판
-- `chailx.json`을 사용하여 게시판 목록을 보여줌
+- `chalix.json`을 사용하여 게시판 목록을 보여줌
 
 
 ## 🚀 프로젝트 실행 방법

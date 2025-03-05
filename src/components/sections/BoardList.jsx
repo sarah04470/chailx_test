@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import chalixData from '@/data/chailx.json';
+import chalixData from '@/data/chalix.json';
 import styles from '@/styles/BoardList.module.css';
 
 const BoardListSection = () => {

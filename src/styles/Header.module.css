@@ -17,29 +17,31 @@
   animation-delay: 0.8s;
 }
 
-/* 스크롤 내릴 때 숨김 */
-.hide {
-  display: none;
-  opacity: 0;
-  transform: translateY(-100%);
-  transition: all 0.3s ease-in-out;
-}
+@media (min-width: 769px) {
+  /* 스크롤 내릴 때 숨김 */
+  .hide {
+    display: none;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+  }
 
-/* 스크롤 올릴 때 나타남 */
-.show {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-  background-color: rgba(85, 85, 85, 0.5);
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
-}
+  /* 스크롤 올릴 때 나타남 */
+  .show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    background-color: rgba(85, 85, 85, 0.5);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+  }
 
-/* 최상단일 때 */
-.show.scroll-top {
-  background-color: transparent;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+  /* 최상단일 때 */
+  .show.scroll-top {
+    background-color: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
 }
 
 .header-container {

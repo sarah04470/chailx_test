@@ -61,12 +61,12 @@ const HeaderMobile = () => {
           <nav className={styles['mobile-nav-menu']}>
             <ul>
               <li>
-                <a href="/weare" onClick={() => setMenuOpen(false)}>
+                <a href="/" onClick={(e) => e.preventDefault()}>
                   WHO WE ARE
                 </a>
               </li>
               <li>
-                <a href="/wecan/consulting" onClick={() => setMenuOpen(false)}>
+                <a href="/" onClick={(e) => e.preventDefault()}>
                   WHAT WE CAN
                 </a>
               </li>
@@ -79,7 +79,7 @@ const HeaderMobile = () => {
                 </a>
               </li>
               <li>
-                <a href="/contact" onClick={() => setMenuOpen(false)}>
+                <a href="/" onClick={(e) => e.preventDefault()}>
                   문의하기
                 </a>
               </li>

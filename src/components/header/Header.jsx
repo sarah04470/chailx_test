@@ -68,7 +68,7 @@ const Header = () => {
       <div className={['pc-only', styles['header-container']].join(' ')}>
         <HeaderPC />
       </div>
-      <div className={'mobile-only'}>
+      <div className={['mobile-only', styles['initial']].join(' ')}>
         <HeaderMobile />
       </div>
     </header>

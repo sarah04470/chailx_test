@@ -25,18 +25,44 @@ const SlideImageSection = () => {
     });
 
     // 이미지 애니메이션 (wrap2 ~ wrap5)
-    imageRefs.current.forEach((img, index) => {
-      if (img) {
-        gsap.to(img, {
-          scrollTrigger: {
-            trigger: '.slide-image-position',
-            start: `${10 + index * 5}% top`,
-            end: '50% top',
-            scrub: 1,
-          },
-          top: '-50%',
-        });
-      }
+    gsap.to('.slide-img-wrap.wrap2', {
+      scrollTrigger: {
+        trigger: '.slide-image-position',
+        start: '10% top', // 페이지에서 추출한 값 적용
+        end: '50% top',
+        scrub: 1,
+      },
+      top: '-50%',
+    });
+
+    gsap.to('.slide-img-wrap.wrap3', {
+      scrollTrigger: {
+        trigger: '.slide-image-position',
+        start: '20% top', // 페이지에서 추출한 값 적용
+        end: '55% top',
+        scrub: 1,
+      },
+      top: '-50%',
+    });
+
+    gsap.to('.slide-img-wrap.wrap4', {
+      scrollTrigger: {
+        trigger: '.slide-image-position',
+        start: '15% top', // 페이지에서 추출한 값 적용
+        end: '50% top',
+        scrub: 1,
+      },
+      top: '-50%',
+    });
+
+    gsap.to('.slide-img-wrap.wrap5', {
+      scrollTrigger: {
+        trigger: '.slide-image-position',
+        start: '18% top', // 페이지에서 추출한 값 적용
+        end: '60% top',
+        scrub: 1,
+      },
+      top: '-50%',
     });
 
     // wrap1 애니메이션 조정
@@ -47,19 +73,14 @@ const SlideImageSection = () => {
           start: '10% top',
           end: '50% top',
           scrub: 1,
-          // markers: true
         },
       })
       .to('.slide-img-wrap.wrap1', {
         top: '50%',
-        // transform: 'translate(-50%, -50%)', // 중앙 정렬 유지
-        // left: '50%',
-        // position: 'absolute', // 위치 고정
       })
       .to('.slide-img-wrap.wrap1', {
         width: '100%', // 전체 화면 채우도록 변경
         height: '100%',
-        // top: '50%',
         filter: 'brightness(0.7)',
       });
   }, []);
